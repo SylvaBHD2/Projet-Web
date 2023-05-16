@@ -1,0 +1,131 @@
+body{
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 10px 0;
+    box-shadow:0 0 10px #000000;
+}
+
+header{
+    /* Lien vers image */
+    background-image: url("../img/banniere_header.jpg");
+    width: 1500px;
+    height: 300px;
+    padding: 10px 0;
+    box-shadow:inset 0 0 10px #000000;
+    border: aqua 2px solid;
+}
+
+footer{
+    /* Lien vers image */
+    background-image: url("../img/banniere_footer.png");
+    padding: 10px 0;
+    width: 1500px;
+    /* height: 300px; */
+    box-shadow: 0 0 10px #000000;
+    position :fixed;
+    bottom: 0cm;
+}
+
+/* centrer les titres de niveau h1 */
+h1{
+    text-align: center;
+    color: rgb(40, 33, 168);
+    size: 150px;
+}
+
+h2{
+    
+    color: aqua;
+    size: 50px;
+}
+
+a{
+    display: block;
+    text-align: center;
+    font-size: larger;
+    text-decoration: none;
+    color: #979393;
+    /* background-color: #2f1ee4; */
+}
+
+section{
+    justify-content: center;
+}
+
+#menu{
+    /* padding: 0 10 px;
+    margin: 50; */
+    text-decoration: none;
+    /* transform in flexbox */
+    display: flex;
+    /* align-items: center; */
+    border: tomato 2px solid;
+}
+
+#menu li:hover{
+    color: springgreen;
+    transition: all 1s ease;
+    /* change the box color on hover */
+}
+#menu a:hover{
+    color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0) 2px solid;
+    background-color: #000000;
+    transition: all 0.5s ease;
+    /* change the box color on hover */
+}
+
+#menu :first-child{
+    margin-left: auto;
+    background-color: bisque;
+}
+#menu :nth-child(2){
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+}
+
+#menu :last-child{
+    margin-right: auto;
+    background-color: rgb(172, 102, 17);
+}
+
+#c1{
+    background-color: rgb(255, 0, 0);
+}
+
+#c2{
+    background-color: rgb(255, 166, 0);
+}
+
+#c3{
+    background-color: rgb(177, 210, 45);
+}
+
+#c4{
+    background-color: rgb(21, 255, 0);
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: auto;
+    width: 50%;
+}
+caption{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form{
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10%;
+    /* shadow */
+    box-shadow: 0 0 10px #000000;
+}
