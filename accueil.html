@@ -1,66 +1,157 @@
-<!DOCTYPE html> <!-- Version 5 de HTML-->
-<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
-<head> <!-- Entête du document HTML -->
-    <title>Secured </title> <!-- Indique au navigateur quel titre vous donnez à votre page -->
-    <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- précise la largeur de la page à celle de l'écran et le niveau de zoom à 1.0-->
-    <link rel= "stylesheet" href="css/style.css">
-</head><!-- Fin de la balise d'entête -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- style -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>LoveScore</title>
+    <link rel="icon" href="./img/coeur.gif">
+</head>
+<body>
 
-<body><!-- Début du code de la page web -->
     <header>
-        <a href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">
-            <img src = "img/téléchargé.jpg" alt = "BruteForceImage" weight="1000" width="750" >
-        </a>
-        <div >
-            <ul id="menu">
-                <li>
-                    <a href="informations.html">Informations</a>
-                </li>
-                <li>
-                    <a href="password.html">Password</a>
-                </li>
-                <li>
-                    <a href="accueil.html">accueil</a>
-                </li>
-            </ul>
+        <div class = "bottom-header">
+            <div class = left-side>
+                <div class = "logo">
+                    <a href="index.html">
+                        <img id = logo_img src="./img/coeur.gif" alt="logo">
+                        <img class="nom-logo" id="logo_txt" src="./img/LoveScore.png" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <div class = middle-side>
+                <div class = "menu">
+                    <ul>
+                        <li><a href = "informations.html">Test amitié</a></li>
+                        <li><a href = "password.html">Test amour</a></li>
+                        <li><a href = "historique.html">Historique</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "right-side">
+                <div class = "menu">
+                    <ul>
+                        <li><img id="btn-login" src="./img/account.png" alt="account"></li>
+                        <li><a href = "index.html"><img src="./img/menu.png" alt="side_menu"></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
-    <section>
-        <h1>Attaque par brute force, qu’est-ce que c’est ? </h1>
-        <p>Une attaque par force brute est une tentative visant à craquer un mot de passe ou un nom
-        d'utilisateur.
-        Elle vise également à trouver une page Web cachée ou la clé utilisée pour chiffrer un message.
-        Ceci est fait via un processus d'essais et d'erreurs pour, au bout du compte, espérer deviner juste.
-        C'est une vieille méthode d'attaque, mais elle reste efficace et répandue parmi les pirates.</p>
-        <h2>Critères d’une attaque par brute force </h2>
-        <p>En fonction de la longueur et de la complexité du mot de passe, le craquage peut prendre entre
-        quelques secondes et plusieurs années.
-        En réalité, que certains pirates ciblent les mêmes systèmes chaque jour pendant des mois et parfois
-        même des années.
-        <h2>Défense contre l'attaque par force brute </h2>
 
-        <ul>
-            <li>Utilisation de mots de passe robustes :
-            <ol>
-                <li>Allonger le mot de passe ou la clé si cela est possible</li>
-                <li>Utiliser la plus grande gamme de symboles possibles</li>
-            </ol>
-            </li>
-            <li>Randomisation des mots de passe :
-            <ol>
-                <li>Eviter l'emploi de mot du langage commun</li>
-                <li>Eviter les répétitions de formes de mot de passe</li>
-            </ol>
-            </li>
-            <li>Limitation temporelle des connexions</li>
-            <li>Augmentation du coût par tentative</li>
-            <li>Renouvellement des mots de passe</li>
-        </ul>
-        </p>
-    </section>
-<footer>
-    <a  href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">En savoir plus</a>    
-</footer>
-</body><!-- Fin du code de la page web -->
-</html><!-- Fin du document HTML -->
+    <div class = "content">
+        <div class = "banner">
+            <video autoplay muted loop id="banner-video">
+                <source src="./img/Banniere.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class = cards>
+            <div class = card>
+                <div class = left-card>
+                    <div class = text>
+                        <h2>0% - 50%</h2>
+                        <p>
+                            <div>
+                            Votre pourcentage de compatibilité est entre 0 et 50% ?
+                            </div>
+                            <div>
+                                Vous n'êtes pas fait pour être ensemble, mais vous pouvez toujours être amis !
+                                Oui, c'est triste, mais c'est la vie.
+                                La friendzone n'est pas une fatalité, vous pouvez toujours trouver l'amour ailleurs.
+                                Ne perdez pas espoir !
+                                Comme on dit, "un de perdu, dix de retrouvés" !
+                            </div>
+                        </p>
+                    </div>
+                </div>
+                <div class = right-card>
+                    <video autoplay muted loop id="wtb_video">
+                        <source src="./img/Friendzone.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class = card>
+                <div class = left-card>
+                    <video autoplay muted loop id="wts_video">
+                        <source src="./img/tente-la.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class = right-card>
+                    <div class = text>
+                        <h2>50% - 80%</h2>
+                        <p>
+                            <div>
+                                Votre pourcentage de compatibilité est entre 50 et 80% ?
+                            </div>
+                            <div>
+                                C'est pas l'amour fou, mais vous pouvez toujours vous donner une chance !
+                                Vous avez des points communs, mais aussi des différences.
+                                Vous pouvez toujours essayer de vous mettre ensemble, mais ne vous forcez pas.
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = card>
+                <div class = left-card>
+                    <div class = text>
+                        <h2>80% - 100%</h2>
+                        <p>
+                        <div>
+                            Votre pourcentage de compatibilité est entre 80 et 100% ?
+                        </div>
+                        <div>
+                            Vous êtes fait l'un pour l'autre !
+                            Vous avez beaucoup de points communs, et vous vous complétez.
+                            Vous pouvez vous mettre ensemble sans problème, vous êtes faits pour être ensemble !
+                            C'est beau l'amour !
+                        </div>
+                    </p>
+                    </div>
+                </div>
+                <div class = right-card>
+                    <!-- a video running in the right card background -->
+                    <video autoplay muted loop id="wtt-video">
+                        <source src="./img/C'est-fait.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <div class = "content-footer">
+            <div class= "help">
+                <h2>Aide</h2>
+                <ul>
+                    <li><a href = "help.html#contact">Nous contacter</a></li>
+                    <li><a href = "help.html#FAQ">FAQ</a></li>
+                    <li><a href = "index.html">Conditions générales</a></li>
+                    <li><a href = "index.html">Politique de confidentialité</a></li>
+                    <li><a href = "index.html">Politique de cookies</a></li>
+                </ul>
+            </div>
+            <div class = "a_propos">
+                <h2>A propos</h2>
+                <ul>
+                    <li><a href = "index.html">Actualité</a></li>
+                    <li><a href = "index.html">Qui sommes-nous ?</a></li>
+                    <li><a href = "index.html">Notre équipe</a></li>
+                    <li><a href = "index.html">Notre histoire</a></li>
+                    <li><a href = "index.html">Notre mission</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class = bottom-footer>
+            <div></div>
+            <div class = "copyright">
+                <p>© 2023 LoveScore - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
