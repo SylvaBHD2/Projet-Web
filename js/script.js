@@ -36,6 +36,10 @@ function bienvenu(){
 function clearProfiles(){
     var test = document.getElementById("date1").value;
     console.log("La date de naissanceest "+test);
+    // get the name 1
+    console.log("IMPORTANT : "+document.forms.ajoutPWD.elements["nombrecar"].value);
+    var nom1 = document.getElementById("nom1").value;
+    console.log("Le nom  :"+ nom1);
     document.loveTester.reset();
 }
 
@@ -94,7 +98,7 @@ function calculerPourcentageCompatibilite(nom1, prenom1, nom2, prenom2) {
   }
 
 function generer(){
-    console.log("Je suis dans la fonction generer");
+    // console.log("Je suis dans la fonction generer");
     // a. Créez la variable duree dans laquelle sera stocké un nouvel élément td.
     var duree = document.createElement('td');
     
@@ -106,7 +110,7 @@ function generer(){
     
     var monformulaire = document.forms.loveTester;
     console.log("Voici le formulaire"+monformulaire);
-    console.log("Voici le nom1"+monformulaire.elements["nom1"].value);
+    console.log("Voici le nom11"+document.getElementById("prenom1").value);
     //vérifie les noms et prénoms du formulaire sont saisis
     if ((monformulaire.elements["nom1"].value == "") || (monformulaire.elements["prenom1"].value == "") || (monformulaire.elements["nom2"].value == "") || (monformulaire.elements["prenom2"].value == "")) {
         alert("Veuillez saisir les noms et prénoms des deux personnes à tester");
@@ -155,19 +159,19 @@ function contient_carspecial(str) {
     return specialChars.test(str);
 }
 
-document.addEventListener("DOMContentLoaded", function() 
-{
-    document.querySelector('#addtest').addEventListener('submit',function(e){
-        //vérifie si au moins le nom et le prénom du formulaire est cochée
-        if((document.getElementById("prenom2"))){
-        alert("Veuillez entrer un prenom");
-            e.preventDefault();
-        }
-        else{
-            generer();
-        }
-    });
-});
+// document.addEventListener("DOMContentLoaded", function() 
+// {
+//     document.querySelector('#addtest').addEventListener('submit',function(e){
+//         //vérifie si au moins le nom et le prénom du formulaire est cochée
+//         if((document.getElementById("prenom2"))){
+//         alert("Veuillez entrer un prenom");
+//             e.preventDefault();
+//         }
+//         else{
+//             generer();
+//         }
+//     });
+// });
 
 function supprimer() {
     if (confirm("Confirmez-vous la suppression de tous les mots de passe générés ?"))
