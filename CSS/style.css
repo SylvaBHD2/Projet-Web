@@ -399,7 +399,7 @@ footer{
 
 .fin{
     
-    background: linear-gradient(to bottom, pink 99%, #8e0507);
+    background: linear-gradient(to top, pink 99%, #8e0507);
 
 }
 
@@ -419,6 +419,8 @@ footer{
 }
 
 .myButton {
+
+
 	box-shadow: 3px 4px 0px 0px #a10d00;
 	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
 	background-color:#c62d1f;
