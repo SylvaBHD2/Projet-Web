@@ -1,12 +1,8 @@
 //fonction qui écrit dans la console le format de la date de naissance
 function clearProfiles(){
-  // var test = document.getElementById("date1").value;
-  // console.log("La date de naissanceest "+test);
-  // // get the name 1
-  // console.log("IMPORTANT : "+document.forms.ajoutPWD.elements["nombrecar"].value);
-  // var nom1 = document.getElementById("nom1").value;
-  // console.log("Le nom  :"+ nom1);
-  document.loveTester.reset();
+  console.log("clearProfiles");
+  //clear tous les champs du formulaire
+  document.testAmour.reset();
 }
 
 function calculerCompatibiliteNoms(nom1, prenom1, nom2, prenom2) {
@@ -262,7 +258,7 @@ function generer(){
   newLine.append(pourcentNom, pourcentDate, pourcentCat, pourcenCulture, total);
   var monTableau = document.getElementById("montab");
   monTableau.appendChild(newLine);
-  
+  document.testAmour.reset();
 }
 
 function contient_carspecial(str) {
@@ -285,13 +281,14 @@ function contient_carspecial(str) {
 // });
 
 function supprimer() {
-  if (confirm("Supprimer tous les profils testés ?"))
+  if (confirm("Supprimer les profils?"))
   {
-    document.loveTester.submit();
-    //supprime toutes les lignes du tableau, sauf la première
-    var table = document.getElementById("montab");
-    var rowCount = table.rows.length;
-    table.shift();
+      // document.testAmour.submit();
+      //supprime toutes les lignes du tableau, sauf la première
+      var table = document.getElementById("montab");
+      // var rowCount = table.rows.length;
+      console.log("VERIF de la longueur du tableau:"+table.rows.length);
+      table.shift();
 }
 }
 
