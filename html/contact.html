@@ -1,26 +1,13 @@
-<!-- a propos de nous, noms étudiants, objectif et pourquoi du site  -->
-
-<!DOCTYPE html> <!-- Version 5 de HTML-->
-<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
-<head> <!-- Entête du document HTML -->
-    <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
     <link rel= "stylesheet" href="../css/style.css">
     <script type="text/javascript" src="../js/script.js"></script>
-    <!-- style -->
     <title>LoveScoreTester</title>
     <link rel="icon" href="../img/coeur.gif">
-    <!-- <style>
-        table, td {
-        border: 1px solid #333;
-        }
-        thead, tfoot {
-        background-color: #333;
-        color: #fff;
-        }
-    </style> -->
-
-</head><!-- Fin de la balise d'entête -->
-<body><!-- Début du code de la page web -->
+</head>
+<body>
     <header>
         <nav class = "bottom-header">
             <div class = left-side>
@@ -48,7 +35,6 @@
                     </ul>
                 </div>
                 <div class = "hamburger">
-                    <!-- <img src="../img/menu.png" alt="side_menu" > -->
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -58,19 +44,39 @@
     </header>
     
     <section class="main-content">
-        <h1>Contactez-nous</h1>
+        <h1><strong>À PROPOS DE NOUS</strong></h1>
 
         <section class="about-us">
-            <h2>À propos de nous</h2>
+            <h2>Qui sommes-nous ?</h2>
             <p>LoveScore a été créé par deux étudiants passionnés de l'Efrei Paris, Alon Debasc et Sylvan Buhard. Notre mission est de transformer la manière dont les gens se connectent et se comprennent. Chez LoveScore, nous utilisons un algorithme sophistiqué pour calculer le pourcentage de compatibilité entre deux personnes, en nous basant sur les réponses fournies dans nos formulaires détaillés.</p>
         </section>
 
+        <section class="our-values">
+            <h2>Nos valeurs</h2>
+            <p>À LoveScore, nous croyons en l'amour, la confiance et l'honnêteté. Nous nous efforçons de fournir un service précis et fiable, tout en garantissant la sécurité et le respect de la vie privée de nos utilisateurs.</p>
+        </section>
+
+        <section class="our-team">
+            <h2>Notre équipe</h2>
+            <p>Notre équipe est composée de développeurs, de concepteurs et de scientifiques des données passionnés par l'amour et la technologie. Nous travaillons sans relâche pour améliorer notre algorithme et offrir la meilleure expérience possible à nos utilisateurs.</p>
+            <!--Photos Alon.png et Sylvan.png-->
+            <div class="team-members">
+                <div class="member1">
+                    <img class="Alon" src="../img/Alon.png" alt="Alon">
+                    <p>Alon Debasc</p>
+                </div>
+                <div class="member2">
+                    <img class="Sylvan" src="../img/Sylvan.png" alt="Sylvan">
+                    <p>Sylvan Buhard</p>
+                </div>
+        </section>
+
         <section class="contact-info">
-            <h2>Comment nous contacter</h2>
+            <h2>Contactez-nous</h2>
             <p>Vous avez une question, une suggestion ou vous voulez simplement nous dire bonjour ? Nous serions ravis de vous entendre ! Voici comment vous pouvez nous joindre :</p>
 
             <div class="contact-buttons">
-                <a href="mailto:contact@lovescore.com" class="contact-btn">Email</a>
+                <a href="contact@lovescore.com" class="contact-btn">Email</a>
                 <a href="tel:+33123456789" class="contact-btn">Téléphone</a>
                 <a href="https://www.facebook.com/lovescore" class="contact-btn">Facebook</a>
                 <a href="https://www.twitter.com/lovescore" class="contact-btn">Twitter</a>
@@ -80,14 +86,35 @@
     </section>
 
     <footer>
+        <div class = "content-footer">
+            <div class= "help">
+                <h2>Aide</h2>
+                <ul>
+                    <li><a href = "nouscontacter.html">Nous contacter</a></li>
+                    <li><a href = "FAQ.html">FAQ</a></li>
+                    <li><a href = "conditions.html">Conditions générales</a></li>
+                    <li><a href = "politique.html">Politique de confidentialité</a></li>
+                    <li><a href = "cookies.html">Politique de cookies</a></li>
+                </ul>
+            </div>
+            <div class = "a_propos">
+                <h2>A propos</h2>
+                <ul>
+                    <li><a href = "actualite.html">Actualité</a></li>
+                    <li><a href = "quisommesnous.html">Qui sommes-nous ?</a></li>
+                    <li><a href = "equipe.html">Notre équipe</a></li>
+                    <li><a href = "histoire.html">Notre histoire</a></li>
+                    <li><a href = "mission.html">Notre mission</a></li>
+                </ul>
+            </div>
+        </div>
         <div class = bottom-footer>
+            <div></div>
             <div class = "copyright">
                 <p>© 2023 LoveScore - Tous droits réservés</p>
             </div>
         </div>
+    <script src="../js/script.js"></script>
     </footer>
-</body>
-</html>
-
 </body>
 </html>
