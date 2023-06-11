@@ -264,31 +264,30 @@ function generer(){
   pourcentDate.textContent = data_list[1];
   pourcentCat.textContent = data_list[2];
   pourcenCulture.textContent = data_list[3];
-
-  total.textContent = calculerMoyennePourcentage(data_list);
+  var resultat_final = calculerMoyennePourcentage(data_list);
+  total.innerHTML =  "<h2>" + resultat_final + " %</h2>";
   newLine.append(pourcentNom, pourcentDate, pourcentCat, pourcenCulture, total);
   var monTableau = document.getElementById("montab");
   monTableau.appendChild(newLine);
+  // console.log("ça passe jusq'uici");
+  //ajoute une phrase personnalisée en fonction du pourcentage dans la div "result"
+  if (resultat_final < 50) {
+    document.getElementById("result").innerHTML = "Vous n'êtes pas compatibles";
+  }
+  else if (resultat_final > 50 && resultat_final < 80) {
+    document.getElementById("result").innerHTML = "Vous êtes moyennement compatibles";
+  }
+  else if (resultat_final > 80) {
+    document.getElementById("result").innerHTML = "Vous êtes TRES compatibles !";
+  }
+  console.log("ça passe jusq'uici");
+
 }
 
 function contient_carspecial(str) {
   const specialChars = /[%!&*^()#$:0123456789]/;
   return specialChars.test(str);
 }
-
-// document.addEventListener("DOMContentLoaded", function() 
-// {
-//     document.querySelector('#addtest').addEventListener('submit',function(e){
-//         //vérifie si au moins le nom et le prénom du formulaire est cochée
-//         if((document.getElementById("prenom2"))){
-//         alert("Veuillez entrer un prenom");
-//             e.preventDefault();
-//         }
-//         else{
-//             generer();
-//         }
-//     });
-// });
 
 function supprimer() {
   if (confirm("Supprimer les profils?"))
@@ -304,7 +303,7 @@ function supprimer() {
 
 function chiffres_casinos(){
     // à implémenter, un délai avant de voir les chiffres s'afficher, et un effet de défilement des chiffres pendant quelques secondes
-    //surement un eventlistener sur le bouton
+    //eventlistener sur le bouton
     return false;   
 }
 
