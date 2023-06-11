@@ -464,11 +464,6 @@ footer{
 	top:1px;
 }
 
-.test {
-    color: #161c25;
-    ;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -527,11 +522,45 @@ footer{
     /* augmente l'interligne */
     line-height: 150%;
 }
+
+
 table, td {
 border: 1px solid #333;
+text-align: center;
 }
 thead, tfoot {
 background-color: #333;
 color: #fff;
 }
 
+
+.submittest{
+    text-align:center; 
+    clear:both; 
+    /* width:100%;< */
+    padding: 30px 45px;
+    margin: 45px 2px;
+    color: #8e0507;
+}
+
+table>tr{
+    background-color: #8e0507;
+    color: #ffffff;
+    
+}
+
+.datatable{
+    margin: 0% 0% 0% 0%;
+    color: #8e0507;
+    font-size: 20px;
+    font-family: librebaskerville-regular,Arial, Helvetica, sans-serif;
+    width: 75%;
+    height: 75%;
+    background-color: pink;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    /* aligne le tableauy au centre de la page */
+    margin-left: auto;
+    margin-right: auto;
+}
