@@ -47,9 +47,9 @@
             <p>C'est le grand moment ? Remplissez les champs ci-dessous pour connaître votre score d'amour ! Vous n'êtes pas obligé de tour remplir, juste le nom et le prénom pour commencer à voir un score s'afficher !</p>
         </div>
         <div>
-            <form method="post" name="testAmour" action="#" class="box" id="loveTester" onsubmit="return false"></form>
+            <form method="post" name="loveTester" action="#" class="box" id="loveTester" onsubmit="return false"></form>
                 <div class="P1">
-                    <fieldset id="info">
+                    <fieldset id="profil1" form="loveTester">
                         <legend>Profil 1</legend>
                         <!-- strings pour noms et prénoms -->
                         <label  for="loveTester">Prénom</label>
@@ -71,13 +71,16 @@
                         <label  for="loveTester">Couleur préféré</label>
                         <input type="color" id="couleur1" name="couleur1">            
                     </fieldset>
-                    <fieldset id="password" required>
+                    <fieldset id="hobbies1" required form="loveTester">
                         <legend>Hobbies et culture</legend>
                         
                         <label  for="loveTester">Plat préféré</label>
                         <input type="text" name="plat1" id="plat1" required><br>
                         <label  for="loveTester">Chanson/Artiste préféré</label>
-                        <input type="text" name="musique1" id="musique1" required>
+                        <input type="text" name="musique1" id="musique1" required><br>
+                        <!-- sport -->
+                        <label  for="loveTester">Sport préféré</label>
+                        <input type="text" name="sport1" id="sport1" required>
                         <!-- checkbox -->
                         <br>
                         Cochez les films que vous aimez:<br>
@@ -93,13 +96,11 @@
                         <label  for="loveTester">Asterix et Obelix : Mission Cléopâtre</label><br>
                         <input type="checkbox" name="6" id="6" value="6">
                         <label  for="loveTester">Non, aucun</label><br>
-                        <!-- sport -->
-                        <label  for="loveTester">Sport préféré</label>
-                        <input type="text" name="sport1" id="sport1" required>
+                        
                     </fieldset>
                 </div>
                 <div class="P2">
-                    <fieldset id="info">
+                    <fieldset id="profil2" form="loveTester">
                         <legend>Profil 2</legend>
                         <!-- strings pour noms et prénoms -->
                         <label  for="loveTester">Prénom</label>
@@ -121,13 +122,16 @@
                         <label  for="loveTester">Couleur préféré</label>
                         <input type="color" id="couleur2" name="couleur2">                  
                     </fieldset>
-                    <fieldset id="password" required>
+                    <fieldset id="hobbies2" form="loveTester" required>
                         <legend>Hobbies et culture</legend>
                         
                         <label  for="loveTester">Plat préféré</label>
                         <input type="text" name="plat2" id="plat2" required><br>
                         <label  for="loveTester">Chanson/Artiste préféré</label>
-                        <input type="text" name="musique2" id="musique2" required>
+                        <input type="text" name="musique2" id="musique2" required><br>
+                        <!-- sport -->
+                        <label  for="loveTester">Sport préféré</label>
+                        <input type="text" name="sport2" id="sport2" required>
                         <!-- checkbox -->
                         <br>
                         Cochez les films que vous aimez:<br>
@@ -143,11 +147,7 @@
                         <label  for="loveTester">Asterix et Obelix : Mission Cléopâtre</label><br>
                         <input type="checkbox" name="66" id="66" value="6">
                         <label  for="loveTester">Non, aucun</label><br>
-                        <!-- sport -->
                         
-                        <label  for="loveTester">Sport préféré</label>
-                        <input type="text" name="sport2" id="sport2" required>
-
                     </fieldset>
                 </div>
                 </div>

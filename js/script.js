@@ -2,7 +2,14 @@
 function clearProfiles(){
   console.log("clearProfiles");
   //clear tous les champs du formulaire
-  document.testAmour.reset();
+  if (document.loveTester){
+    console.log("clearProfiles: document.loveTester");
+    document.loveTester.reset();
+  }  
+  else{
+    console.log("clearProfiles: document.loveTester n'existe pas");
+  }
+  document.loveTester.reset();
 }
 
 function calculerCompatibiliteNoms(nom1, prenom1, nom2, prenom2) {
@@ -128,7 +135,7 @@ function calculerCompatibiliteCouleur(couleurUtilisateur1, temperamentUtilisateu
   // Calculer le pourcentage de compatibilité
   var pourcentageCompatibilite = 100 - (differenceCouleur + differenceTemperament) / 2;
   //retourne le pourcentage de compatibilité arrondi à 2 chiffres après la virgule
-  return Math.round(pourcentageCompatibilite * 100) / 100;
+  return Math.abs(Math.round(pourcentageCompatibilite * 100)) / 100;
 
 }
   
@@ -253,7 +260,7 @@ function generer(){
   newLine.append(pourcentNom, pourcentDate, pourcentCat, pourcenCulture, total);
   var monTableau = document.getElementById("montab");
   monTableau.appendChild(newLine);
-  document.testAmour.reset();
+  document.loveTester.reset();
 }
 
 function contient_carspecial(str) {
@@ -278,13 +285,13 @@ function contient_carspecial(str) {
 function supprimer() {
   if (confirm("Supprimer les profils?"))
   {
-      // document.testAmour.submit();
-      //supprime toutes les lignes du tableau, sauf la première
       var table = document.getElementById("montab");
-      // var rowCount = table.rows.length;
-      console.log("VERIF de la longueur du tableau:"+table.rows.length);
-      table.shift();
-}
+      if (table.rows.length > 1) {
+        for (var i = table.rows.length - 1; i > 0; i--) {
+          table.deleteRow(i);
+        }
+      }
+  }
 }
 
 function chiffres_casinos(){
@@ -293,4 +300,3 @@ function chiffres_casinos(){
     return false;   
 }
 
-// setInterval(console.log("La value est : "+(document.forms["loveTester"].elements["nom1"])), 1000);
