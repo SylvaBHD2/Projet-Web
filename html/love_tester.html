@@ -1,22 +1,13 @@
-<!DOCTYPE html> <!-- Version 5 de HTML-->
-<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
-<head> <!-- Entête du document HTML -->
-    <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
+<!DOCTYPE html> 
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8"> 
+    <!-- style -->
     <link rel= "stylesheet" href="../css/style.css">
     <script type="text/javascript" src="../js/script.js"></script>
-    <!-- style -->
     <title>LoveScoreTester</title>
     <link rel="icon" href="../img/coeur.gif">
-    <!-- <style>
-        table, td {
-        border: 1px solid #333;
-        }
-        thead, tfoot {
-        background-color: #333;
-        color: #fff;
-        }
-    </style> -->
-
+    
 </head><!-- Fin de la balise d'entête -->
 <body><!-- Début du code de la page web -->
     <header>
@@ -51,122 +42,127 @@
     </header>
     
     <section class="test">
-        <h2 class=>Faites le Test !</h2>
-        <form method="post" name="testAmour" action="#" class="box" id="loveTester" onsubmit="return false"></form>
-            <div style="float:left; width:50%;">
-                <fieldset id="info">
-                    <legend>Profil 1</legend>
-                    <!-- strings pour noms et prénoms -->
-                    <label  for="loveTester">Prénom</label>
-                    <input type="text" name="prenom1" id="prenom1" minlength="2" required>
-                    <label  for="loveTester">Nom</label>
-                    <input type="text" name="nom1" id ="nom1"  minlength="2" required>
-                    <!-- date de naissance -->
-                    <label  for="loveTester">Date de naissance</label>
-                    <input type="date" name="date1" id="date1" required>
-                    <!-- menu déroulant -->
-                    <label  for="loveTester">Tempérament</label>
-                    <select name="temperament1" id="temperament1" required>
-                        <option value="1">gentil</option>
-                        <option value="2">colérique</option>
-                        <option value="3">passionné</option>
-                        <option value="4">introverti</option>
-                        <option value="5">autre</option>
-                    </select>
-                    <label  for="loveTester">Couleur préféré</label>
-                    <input type="color" id="couleur1" name="couleur1">            
-                </fieldset>
-                <fieldset id="password" required>
-                    <legend>Hobbies et culture</legend>
-                    
-                    <label  for="loveTester">Plat préféré</label>
-                    <input type="text" name="plat1" id="plat1" required>
-                    <label  for="loveTester">Chanson/Artiste préféré</label>
-                    <input type="text" name="musique1" id="musique1" required>
-                    <!-- checkbox -->
-                    <br>
-                    Cochez les films que vous aimez:
-                    <input type="checkbox" name="1" id="1" value="1">
-                    <label  for="loveTester">Fast And Furious</label>
-                    <input type="checkbox" name="2" id="2" value="2">
-                    <label  for="loveTester">Moi Moche et Méchant</label>
-                    <input type="checkbox" name="3" id="3" value="3">
-                    <label  for="loveTester">Pirate des caraibes</label>
-                    <input type="checkbox" name="4" id="4" value="4">
-                    <label  for="loveTester">Star Wars</label>
-                    <input type="checkbox" name="5" id="5" value="5">
-                    <label  for="loveTester">Asterix et Obelix : Mission Cléopâtre</label>
-                    <input type="checkbox" name="6" id="6" value="6">
-                    <label  for="loveTester">Non, aucun</label>
-                    <!-- sport -->
-                    <br>
-                    <label  for="loveTester">Sport préféré</label>
-                    <input type="text" name="sport1" id="sport1" required>
-                </fieldset>
-            </div>
-            <div style="float:left; width:50%;">
-                <fieldset id="info">
-                    <legend>Profil 2</legend>
-                    <!-- strings pour noms et prénoms -->
-                    <label  for="loveTester">Prénom</label>
-                    <input type="text" name="prenom2" id="prenom2" minlength="2" required>
-                    <label  for="loveTester">Nom</label>
-                    <input type="text" name="nom2" id="nom2" minlength="2"  required>
-                    <!-- date de naissance -->
-                    <label  for="loveTester">Date de naissance</label>
-                    <input type="date" name="date2" id="date2" required>
-                    <!-- menu déroulant -->
-                    <label  for="loveTester">Tempérament</label>
-                    <select name="temperament2" id="temperament2" required>
-                        <option value="1">gentil</option>
-                        <option value="2">colérique</option>
-                        <option value="3">passionné</option>
-                        <option value="4">introverti</option>
-                        <option value="5">autre</option>
-                    </select>
-                    <label  for="loveTester">Couleur préféré</label>
-                    <input type="color" id="couleur2" name="couleur2">                  
-                </fieldset>
-                <fieldset id="password" required>
-                    <legend>Hobbies et culture</legend>
-                    
-                    <label  for="loveTester">Plat préféré</label>
-                    <input type="text" name="plat2" id="plat2" required>
-                    <label  for="loveTester">Chanson/Artiste préféré</label>
-                    <input type="text" name="musique2" id="musique2" required>
-                    <!-- checkbox -->
-                    <br>
-                    Cochez les films que vous aimez:
-                    <input type="checkbox" name="11" id="11" value="1">
-                    <label  for="loveTester">Fast And Furious</label>
-                    <input type="checkbox" name="22" id="22" value="2">
-                    <label  for="loveTester">Moi Moche et Méchant</label>
-                    <input type="checkbox" name="33" id="33" value="3">
-                    <label  for="loveTester">Pirate des caraibes</label>
-                    <input type="checkbox" name="44" id="44" value="4">
-                    <label  for="loveTester">Star Wars</label>
-                    <input type="checkbox" name="55" id="55" value="5">
-                    <label  for="loveTester">Asterix et Obelix : Mission Cléopâtre</label>
-                    <input type="checkbox" name="66" id="66" value="6">
-                    <label  for="loveTester">Non, aucun</label>
-                    <!-- sport -->
-                    <br>
-                    <label  for="loveTester">Sport préféré</label>
-                    <input type="text" name="sport2" id="sport2" required>
+        <div class="haut">
+            <h1 >Faites le Test !</h1>
+            <p>C'est le grand moment ? Remplissez les champs ci-dessous pour connaître votre score d'amour ! Vous n'êtes pas obligé de tour remplir, juste le nom et le prénom pour commencer à voir un score s'afficher !</p>
+        </div>
+        <div>
+            <form method="post" name="testAmour" action="#" class="box" id="loveTester" onsubmit="return false"></form>
+                <div class="P1">
+                    <fieldset id="info">
+                        <legend>Profil 1</legend>
+                        <!-- strings pour noms et prénoms -->
+                        <label  for="loveTester">Prénom</label>
+                        <input type="text" name="prenom1" id="prenom1" minlength="2" required>
+                        <label  for="loveTester">Nom</label>
+                        <input type="text" name="nom1" id ="nom1"  minlength="2" required><br>
+                        <!-- date de naissance -->
+                        <label  for="loveTester">Date de naissance</label>
+                        <input type="date" name="date1" id="date1" required><br>
+                        <!-- menu déroulant -->
+                        <label  for="loveTester">Tempérament</label>
+                        <select name="temperament1" id="temperament1" required>
+                            <option value="1">gentil</option>
+                            <option value="2">colérique</option>
+                            <option value="3">passionné</option>
+                            <option value="4">introverti</option>
+                            <option value="5">autre</option>
+                        </select><br>
+                        <label  for="loveTester">Couleur préféré</label>
+                        <input type="color" id="couleur1" name="couleur1">            
+                    </fieldset>
+                    <fieldset id="password" required>
+                        <legend>Hobbies et culture</legend>
+                        
+                        <label  for="loveTester">Plat préféré</label>
+                        <input type="text" name="plat1" id="plat1" required>
+                        <label  for="loveTester">Chanson/Artiste préféré</label>
+                        <input type="text" name="musique1" id="musique1" required>
+                        <!-- checkbox -->
+                        <br>
+                        Cochez les films que vous aimez:
+                        <input type="checkbox" name="1" id="1" value="1">
+                        <label  for="loveTester">Fast And Furious</label>
+                        <input type="checkbox" name="2" id="2" value="2">
+                        <label  for="loveTester">Moi Moche et Méchant</label>
+                        <input type="checkbox" name="3" id="3" value="3">
+                        <label  for="loveTester">Pirate des caraibes</label>
+                        <input type="checkbox" name="4" id="4" value="4">
+                        <label  for="loveTester">Star Wars</label>
+                        <input type="checkbox" name="5" id="5" value="5">
+                        <label  for="loveTester">Asterix et Obelix : Mission Cléopâtre</label>
+                        <input type="checkbox" name="6" id="6" value="6">
+                        <label  for="loveTester">Non, aucun</label>
+                        <!-- sport -->
+                        <br>
+                        <label  for="loveTester">Sport préféré</label>
+                        <input type="text" name="sport1" id="sport1" required>
+                    </fieldset>
+                </div>
+                <div class="P2">
+                    <fieldset id="info">
+                        <legend>Profil 2</legend>
+                        <!-- strings pour noms et prénoms -->
+                        <label  for="loveTester">Prénom</label>
+                        <input type="text" name="prenom2" id="prenom2" minlength="2" required>
+                        <label  for="loveTester">Nom</label>
+                        <input type="text" name="nom2" id="nom2" minlength="2"  required>
+                        <!-- date de naissance -->
+                        <label  for="loveTester">Date de naissance</label>
+                        <input type="date" name="date2" id="date2" required><br>
+                        <!-- menu déroulant -->
+                        <label  for="loveTester">Tempérament</label>
+                        <select name="temperament2" id="temperament2" required>
+                            <option value="1">gentil</option>
+                            <option value="2">colérique</option>
+                            <option value="3">passionné</option>
+                            <option value="4">introverti</option>
+                            <option value="5">autre</option>
+                        </select>
+                        <label  for="loveTester">Couleur préféré</label>
+                        <input type="color" id="couleur2" name="couleur2">                  
+                    </fieldset>
+                    <fieldset id="password" required>
+                        <legend>Hobbies et culture</legend>
+                        
+                        <label  for="loveTester">Plat préféré</label>
+                        <input type="text" name="plat2" id="plat2" required>
+                        <label  for="loveTester">Chanson/Artiste préféré</label>
+                        <input type="text" name="musique2" id="musique2" required>
+                        <!-- checkbox -->
+                        <br>
+                        Cochez les films que vous aimez:
+                        <input type="checkbox" name="11" id="11" value="1">
+                        <label  for="loveTester">Fast And Furious</label>
+                        <input type="checkbox" name="22" id="22" value="2">
+                        <label  for="loveTester">Moi Moche et Méchant</label>
+                        <input type="checkbox" name="33" id="33" value="3">
+                        <label  for="loveTester">Pirate des caraibes</label>
+                        <input type="checkbox" name="44" id="44" value="4">
+                        <label  for="loveTester">Star Wars</label>
+                        <input type="checkbox" name="55" id="55" value="5">
+                        <label  for="loveTester">Asterix et Obelix : Mission Cléopâtre</label>
+                        <input type="checkbox" name="66" id="66" value="6">
+                        <label  for="loveTester">Non, aucun</label>
+                        <!-- sport -->
+                        <br>
+                        <label  for="loveTester">Sport préféré</label>
+                        <input type="text" name="sport2" id="sport2" required>
 
-                </fieldset>
-            </div>
-            </div>
-            <!-- //la div est alignée au centre -->
-            <div style="text-align:center; clear:both; width:100%;">
-            <fieldset id="submit">
-                <legend>Soumettre le Test</legend>
-                <input class="btn" id="ajouter" type="submit" value="Ajouter" onclick="generer()" >
-                <input class="btn" id="supp" type="reset" value="Supprimer" onclick="supprimer()">
-                <input class="btn" id="clear"type="reset" value="nouveaux profils" onclick="clearProfiles()">
-            </fieldset>  
-            </div>
-        </form>
+                    </fieldset>
+                </div>
+                </div>
+                <!-- //la div est alignée au centre -->
+                <div style="text-align:center; clear:both; width:100%;">
+                <fieldset id="submit">
+                    <legend>Soumettre le Test</legend>
+                    <input class="btn" id="ajouter" type="submit" value="Ajouter" onclick="generer()" >
+                    <input class="btn" id="supp" type="reset" value="Supprimer" onclick="supprimer()">
+                    <input class="btn" id="clear"type="reset" value="nouveaux profils" onclick="clearProfiles()">
+                </fieldset>  
+                </div>
+            </form>
+        </div>
     </section>
     <section>
         <main class="box">
