@@ -855,6 +855,7 @@ table>tr{
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #8e0507;
+    margin-top: 5%;
 }
 .Sylvan{
     width: 20%;
@@ -862,4 +863,9 @@ table>tr{
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #8e0507;
+    margin-top: 5%;
+}
+
+html, body {
+    overflow-x: hidden;
 }
