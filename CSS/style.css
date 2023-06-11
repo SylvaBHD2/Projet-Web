@@ -30,10 +30,6 @@ body{
     padding: 10px 20px;
     margin: 0;
     z-index: 9000;
-    /*met le au centre*/
-    width: 100%;
-
-
 }
 
 .left-side{
@@ -661,12 +657,12 @@ background-color: #333;
 color: #fff;
 }
 
-.header {
+/* .header {
     background-color: pink;
     color: #fff;
     padding: 10px 0;
     position: fixed;
-}
+} */
 
 .main-content {
     text-align: center;
@@ -813,7 +809,6 @@ table>tr{
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
-    /* aligne le tableauy au centre de la page */
     margin-left: auto;
     margin-right: auto;
 }
@@ -835,7 +830,6 @@ table>tr{
     padding: 0;
     margin: 5px;
     color: #8e0507;
-    /* met le texte en plus gros */
     font-size: 20px;
     font-family: librebaskerville-regular,Arial, Helvetica, sans-serif;
     width: 100%;
@@ -844,7 +838,6 @@ table>tr{
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
-    /* aligne le tableauy au centre de la page */
     margin-left: auto;
     margin-right: auto;
 }
