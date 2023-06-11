@@ -4,17 +4,16 @@
     <meta charset="UTF-8"> 
     <!-- style -->
     <link rel= "stylesheet" href="../css/style.css">
-    <script type="text/javascript" src="../js/script.js"></script>
     <title>LoveScoreTester</title>
     <link rel="icon" href="../img/coeur.gif">
     
 </head><!-- Fin de la balise d'entête -->
 <body><!-- Début du code de la page web -->
     <header>
-        <div class = "bottom-header">
+        <nav class = "bottom-header">
             <div class = left-side>
                 <div class = "logo">
-                    <a href="index.html">
+                    <a href="accueil.html">
                         <img class="nom-logo" id="logo_txt" src="../img/LoveScore.png" alt="logo">
                         <img id = logo_img src="../img/coeur.gif" alt="logo">
                     </a>
@@ -31,15 +30,19 @@
                 </div>
             </div>
             <div class = "right-side">
-                <div class = "menu">
+                <div class="menu">
                     <ul>
                         <li><img id="btn-login" src="../img/account.png" alt="account"></li>
-                        <li><a href = "index.html"><img src="../img/menu.png" alt="side_menu"></a></li>
                     </ul>
                 </div>
+                <div class = "hamburger">
+                    <!-- <img src="../img/menu.png" alt="side_menu" > -->
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            </div>
-        </div>
+        </nav>
     </header>
     
     <section class="test">
@@ -151,7 +154,8 @@
                         
                     </fieldset>
                 </div>
-                </div>
+                <br>
+                
                 <!-- //la div est alignée au centre -->
                 <div class="submittest">
                     <fieldset id="submit">
@@ -166,6 +170,9 @@
     </section>
     <section>
         <main class="box">
+            <div id="divresult">
+                <p id="result" style="align-content:center"></p>
+            </div>
             <table id="montab" class="datatable">
     
               <tr>
@@ -210,14 +217,7 @@
             </div>
         </div>
     </footer>
-
-    </html><!-- Fin du document -->
+    <script type="text/javascript" src="../js/script.js"></script>
 </body><!-- Fin du code de la page web -->
-
-<!-- 5. résultat total -->
-<!-- 7. sport préféré -->
-<!-- 8. acteur préféré -->
-<!-- 9. plat préféré -->
-<!-- 10. boisson préférée -->
-<!-- 11. film préféré -->
+</html><!-- Fin du document -->
 
