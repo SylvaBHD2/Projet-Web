@@ -121,14 +121,26 @@ height: 20px;
         top:70 px;
         gap: 0;
         flex-direction: column;
-        background:#f58b8b;
+        background: linear-gradient(to top, rgb(255, 161, 176) 0%, pink 100%);
         width: 100%;
         text-align: center;
         /* height: 100%; */
     }
+
+    .header{
+        position: fixed;
+    }
     
     .hamburger {
       display: block;
+      position: fixed;
+      background: linear-gradient(to top, rgb(255, 161, 176) 0%, pink 100%);
+        padding: 25px 25px;
+        text-decoration: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border:solid #810e05;
+        z-index: 8000;
     }
 
     .hamburger.active{
