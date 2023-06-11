@@ -1,15 +1,14 @@
 //fonction qui écrit dans la console le format de la date de naissance
 function clearProfiles(){
-  console.log("clearProfiles");
-  //clear tous les champs du formulaire
-  if (document.loveTester){
-    console.log("clearProfiles: document.loveTester");
-    document.loveTester.reset();
-  }  
-  else{
-    console.log("clearProfiles: document.loveTester n'existe pas");
+  var form = document.getElementById("testAmour");
+
+  if (form !== null) {
+    console.log("form not null:"+form);
+    form.reset();
   }
-  document.loveTester.reset();
+  else {
+    console.log("form null:"+form);
+  }
 }
 
 function calculerCompatibiliteNoms(nom1, prenom1, nom2, prenom2) {
@@ -112,8 +111,8 @@ function calculerCompatibiliteFilms() {
 
 function calculerCompatibiliteCouleur(couleurUtilisateur1, temperamentUtilisateur1, couleurUtilisateur2, temperamentUtilisateur2) {
   // Calculer la différence de couleur (la distance euclidienne entre les valeurs RGB)
-  console.log("tempérament:"+temperamentUtilisateur1  + "/" + temperamentUtilisateur2);
-  console.log(" Tets couleurs ; couleur1:"+couleurUtilisateur1  + "/" + couleurUtilisateur2);
+  // console.log("tempérament:"+temperamentUtilisateur1  + "/" + temperamentUtilisateur2);
+  // console.log(" Tets couleurs ; couleur1:"+couleurUtilisateur1  + "/" + couleurUtilisateur2);
   if (!couleurUtilisateur1 || !temperamentUtilisateur1 || !couleurUtilisateur2 || !temperamentUtilisateur2){ 
   return "-";
   }
@@ -169,7 +168,7 @@ function calculerMoyennePourcentage(data_list) {
   for (var i = 0; i < data_list.length; i++) {
     // Vérifier si l'élément est un pourcentage valide
     if (data_list[i] != "-" && typeof data_list[i] === "number" && !isNaN(data_list[i])) {
-      console.log("ajout de "+data_list[i]);
+      // console.log("ajout de "+data_list[i]);
       sum += data_list[i];
     }
     else {
@@ -260,7 +259,6 @@ function generer(){
   newLine.append(pourcentNom, pourcentDate, pourcentCat, pourcenCulture, total);
   var monTableau = document.getElementById("montab");
   monTableau.appendChild(newLine);
-  document.loveTester.reset();
 }
 
 function contient_carspecial(str) {
