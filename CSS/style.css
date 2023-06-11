@@ -23,17 +23,21 @@ body{
 
 /* bottom header*/
 .bottom-header{
+    /* position : fixed; */
     display: flex;
-    align-items: center;
     justify-content: space-between;
     background: linear-gradient(to top, rgb(255, 161, 176) 0%, pink 100%);
     padding: 10px 20px;
     margin: 0;
+    z-index: 9000;
 
 }
 
 .left-side{
     width: 100%;
+
+    text-decoration: none;
+
 }
 
 .logo a{
@@ -68,8 +72,91 @@ body{
     margin: 0;
     gap: 30px;
 }
+/* ici */
 
-/* when the mouse is over the menu, an animation draws a line under the text*/
+.menu {
+    display: inline-block;
+    display: block;
+    position: fixed;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background: linear-gradient(to top, rgb(255, 161, 176) 0%, pink 100%);
+    /* smooth the borders */
+    border-radius: 10px;
+    /* add a shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border:solid #810e05;
+    z-index: 9000;
+    /* background-color: #f58b8b; */
+}
+  
+.hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+.hamburger .bar {
+display: block;
+width: 25px;
+height: 3px;
+background-color: #333;
+margin: 5px 0;
+-webkit-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+
+}
+
+.hamburger img{
+cursor: pointer;
+width: 20px;
+height: 20px;
+}
+
+@media (max-width: 900px) {
+    .menu{
+        display: none;
+        position:fixed;
+        left:-100%;
+        top:70 px;
+        gap: 0;
+        flex-direction: column;
+        background:#f58b8b;
+        width: 100%;
+        text-align: center;
+        /* height: 100%; */
+    }
+    
+    .hamburger {
+      display: block;
+    }
+
+    .hamburger.active{
+        display: block;
+
+    }
+
+    .menu.active{
+        /* background: #fff; */
+        left: 0;
+        transition: 0.5s;
+        display: block;
+        width: auto;
+        /* z-index: 1; */
+    }
+}
+
+nav{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* flex-direction: row; */
+    /* gap: 20px; */
+    /* position: fixed; */
+    background-color: #f58b8b;
+}
+
+/* jusque là */
 
 
 .middle-side a {
@@ -104,16 +191,12 @@ body{
     transform-origin: left;
 }
 
-
-
-
 .right-side{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-
 
 .right-side>.menu ul{
     display: flex;
@@ -537,6 +620,7 @@ color: #fff;
     background-color: pink;
     color: #fff;
     padding: 10px 0;
+    position: fixed;
 }
 
 .main-content {

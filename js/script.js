@@ -1,3 +1,13 @@
+//fonction pour le hamburger menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".menu");
+
+hamburger.addEventListener("click", ()=>{
+  console.log("click");
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
 //fonction qui écrit dans la console le format de la date de naissance
 function clearProfiles(){
   var form = document.getElementById("testAmour");
