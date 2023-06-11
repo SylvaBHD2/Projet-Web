@@ -80,7 +80,6 @@ function calculerCompatibiliteFilms() {
   
   // si aucune case n'est cochée on retourne "-"
   if (liste1.length === 0 || liste2.length === 0) {
-    console.log("rien trouvé");
     return "-";
   }
 
@@ -98,21 +97,19 @@ function calculerCompatibiliteFilms() {
       }
     }   
   } 
-  console.log("DEBUG compteur: "+compteur + " le diviseur "+Math.max(liste1.length,liste2.length));
   // calcule le pourcentage, basé sur le nombre de choix communs
   let pourcentage = (compteur / Math.max(liste1.length,liste2.length))*100;
-  console.log("pourcentage fina:"+pourcentage);
   //retourne le pourcentage arrondi à 2 chiffres après la virgule
   return Math.round(pourcentage * 100) / 100;
 }
 
 function calculerCompatibiliteCouleur(couleurUtilisateur1, temperamentUtilisateur1, couleurUtilisateur2, temperamentUtilisateur2) {
   // Calculer la différence de couleur (la distance euclidienne entre les valeurs RGB)
-  //console.log("tempérament:"+temperamentUtilisateur1  + "/" + temperamentUtilisateur2);
-  // console.log(" Tets couleurs ; couleur1:"+couleurUtilisateur1  + "/" + couleurUtilisateur2);
-  if (!couleurUtilisateur1 || !temperamentUtilisateur1 || !couleurUtilisateur2 || !temperamentUtilisateur2){
-    return "-";
-  } 
+  console.log("tempérament:"+temperamentUtilisateur1  + "/" + temperamentUtilisateur2);
+  console.log(" Tets couleurs ; couleur1:"+couleurUtilisateur1  + "/" + couleurUtilisateur2);
+  if (!couleurUtilisateur1 || !temperamentUtilisateur1 || !couleurUtilisateur2 || !temperamentUtilisateur2){ 
+  return "-";
+  }
   function convertirHexVersRVB(couleurHex) {
     var r = parseInt(couleurHex.substring(1, 3), 16);
     var g = parseInt(couleurHex.substring(3, 5), 16);
@@ -130,7 +127,6 @@ function calculerCompatibiliteCouleur(couleurUtilisateur1, temperamentUtilisateu
   var differenceTemperament = Math.abs(temperamentUtilisateur1 - temperamentUtilisateur2);
   // Calculer le pourcentage de compatibilité
   var pourcentageCompatibilite = 100 - (differenceCouleur + differenceTemperament) / 2;
-  console.log("F1 important"+pourcentageCompatibilite);
   //retourne le pourcentage de compatibilité arrondi à 2 chiffres après la virgule
   return Math.round(pourcentageCompatibilite * 100) / 100;
 
@@ -155,7 +151,6 @@ function calculerCompatibiliteStr(chaine1, chaine2) {
 
   // Convertir le coefficient en pourcentage et arrondit à deux chiffres après la virgule
   var pourcentageCompatibilite = Math.round(coefficientSimilarite * 10000) / 100;
-  // console.log("C important"+chaine1+" et "+chaine2+" est de "+pourcentageCompatibilite)
   return pourcentageCompatibilite;
 }
 
@@ -209,7 +204,7 @@ function generer(){
       return false;
   }
   else { 
-      // console.log("Je suis dans le else");
+      
       //récupère les noms et prénoms du formulaire
       let prenom1=document.getElementById("prenom1").value;
       let nom1=document.getElementById("nom1").value;
@@ -222,9 +217,6 @@ function generer(){
       }
       var pourcentNom=calculerCompatibiliteNoms(nom1, prenom1, nom2, prenom2);
   }
-  var c2 = calculerCompatibiliteDates(document.getElementById("date1").value, document.getElementById("date2").value);
-  // var c3 = calculerCompatibiliteTemperament(document.getElementById("couleur1").value, document.getElementById("temperament1").value, document.getElementById("couleur2").value, document.getElementById("temperament2").value);
-  var c3 = calculerCompatibiliteCouleur(couleur1, document.getElementById("temperament1").value, couleur2, document.getElementById("temperament2").value);
   var sport1 = document.getElementById("sport1").value;
   var sport2 = document.getElementById("sport2").value;
   var musique1 = document.getElementById("musique1").value;
@@ -238,10 +230,13 @@ function generer(){
   var temp2 = calculerCompatibiliteStr(musique1, musique2);
   var temp3 = calculerCompatibiliteStr(plat1, plat2);
   var temp4 = calculerCompatibiliteFilms();
+  var c2 = calculerCompatibiliteDates(document.getElementById("date1").value, document.getElementById("date2").value);
+  // var c3 = calculerCompatibiliteTemperament(document.getElementById("couleur1").value, document.getElementById("temperament1").value, document.getElementById("couleur2").value, document.getElementById("temperament2").value);
+  var c3 = calculerCompatibiliteCouleur(couleur1, document.getElementById("temperament1").value, couleur2, document.getElementById("temperament2").value);
   var moyenneStr = calculerMoyennePourcentage([temp1, temp2, temp3, temp4]);
-  console.log("VERIF de la moyenne:"+moyenneStr);
+  
   var data_list=[pourcentNom,c2,c3,moyenneStr];
-  console.log("VERIF de la liste finale:"+data_list);
+  
   // ajout des éléments au tableau
   var newLine = document.createElement("tr");
   var pourcentNom = document.createElement("td");
